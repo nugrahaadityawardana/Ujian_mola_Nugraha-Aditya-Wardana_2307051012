@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
 import 'screens/signup_screen.dart';
 import 'screens/dashboard_screen.dart';
+import 'screens/profile_screen.dart'; 
 
 void main() => runApp(const JustduitApp());
 
@@ -103,13 +104,14 @@ class JustduitApp extends StatelessWidget {
         ),
       ),
 
-      // 🔁 Alur route tetap sama
+      // 🔁 Alur route tetap sama, hanya ditambah ProfileScreen
       initialRoute: LoginScreen.route,
       routes: {
         '/': (_) => const LoginScreen(),
         LoginScreen.route: (_) => const LoginScreen(),
         SignupScreen.route: (_) => const SignupScreen(),
         DashboardScreen.route: (_) => const DashboardScreen(),
+        ProfileScreen.route: (_) => const ProfileScreen(), // ✅ Tambahan route Profile
       },
     );
   }

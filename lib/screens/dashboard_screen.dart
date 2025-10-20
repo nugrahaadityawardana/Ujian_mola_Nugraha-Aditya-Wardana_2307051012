@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'profile_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
   static const String route = '/dashboard';
@@ -29,6 +30,14 @@ class DashboardScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.edit_outlined, color: Colors.black87),
             onPressed: () {},
+          ),
+          // 🔗 Tombol Profile baru
+          IconButton(
+            icon: const Icon(Icons.person_outline_rounded, color: Colors.black87),
+            tooltip: 'Profile',
+            onPressed: () {
+              Navigator.pushNamed(context, ProfileScreen.route);
+            },
           ),
         ],
       ),
@@ -110,7 +119,9 @@ class DashboardScreen extends StatelessWidget {
                             color: Colors.green,
                             shape: BoxShape.circle,
                             border: Border.all(
-                                color: Colors.white, width: 2),
+                              color: Colors.white,
+                              width: 2,
+                            ),
                           ),
                         ),
                       ),
